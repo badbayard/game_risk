@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>A vos Risk et périls:  Fichier source de src/Combat.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">A vos Risk et périls
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Combat.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Combat_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef COMBAT_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define COMBAT_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Joueur_8h.html">Joueur.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Region_8h.html">Region.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classCombat.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCombat.html">Combat</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keyword">private</span> :</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classCombat.html#a19460ba6b6e3c0da1cc26ac177a824bc">   18</a></span>&#160;    <a class="code" href="classJoueur.html">Joueur</a> <a class="code" href="classCombat.html#a19460ba6b6e3c0da1cc26ac177a824bc">attaquant</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classCombat.html#ad35b2974d131d3c34a3404dfac040c36">   19</a></span>&#160;    <a class="code" href="classJoueur.html">Joueur</a> <a class="code" href="classCombat.html#ad35b2974d131d3c34a3404dfac040c36">defenseur</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classCombat.html#a5818162704c7fc1131c5862e10c362d4">   20</a></span>&#160;    <a class="code" href="classRegion.html">Region</a> <a class="code" href="classCombat.html#a5818162704c7fc1131c5862e10c362d4">region_attaquant</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classCombat.html#a67c594c4c62e4131ac992a4705e0933d">   21</a></span>&#160;    <a class="code" href="classRegion.html">Region</a> <a class="code" href="classCombat.html#a67c594c4c62e4131ac992a4705e0933d">region_defenseur</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">public</span> :</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classCombat.html">Combat</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classCombat.html">Combat</a>(<a class="code" href="classJoueur.html">Joueur</a> &amp;joueur_a, <a class="code" href="classJoueur.html">Joueur</a> &amp;joueur_d, <a class="code" href="classRegion.html">Region</a> region_a, <a class="code" href="classRegion.html">Region</a> region_d);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    ~<a class="code" href="classCombat.html">Combat</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="classJoueur.html">Joueur</a> get_attaquant() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">void</span> set_attaquant(<a class="code" href="classJoueur.html">Joueur</a> att);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="classJoueur.html">Joueur</a> get_defenseur() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">void</span> set_defenseur(<a class="code" href="classJoueur.html">Joueur</a> def);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="classRegion.html">Region</a> get_region_attaquant() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">void</span> set_region_attaquant(<a class="code" href="classRegion.html">Region</a> region_a);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="classRegion.html">Region</a> get_region_defenseur() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordtype">void</span> set_region_defenseur(<a class="code" href="classRegion.html">Region</a> region_d);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordtype">bool</span> bataille(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nb_troupes_attaquant, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nb_troupes_defenseur);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">void</span> maj_troupes(<a class="code" href="classRegion.html">Region</a>&amp; region_attaquant, <a class="code" href="classRegion.html">Region</a>&amp; region_defenseur, <a class="code" href="classJoueur.html">Joueur</a>&amp; jatt, <a class="code" href="classJoueur.html">Joueur</a>&amp; jdef, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp; att = -1, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp; def = -1, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp; transfert = -1);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classCombat_html_ad35b2974d131d3c34a3404dfac040c36"><div class="ttname"><a href="classCombat.html#ad35b2974d131d3c34a3404dfac040c36">Combat::defenseur</a></div><div class="ttdeci">Joueur defenseur</div><div class="ttdef"><b>Definition:</b> Combat.h:19</div></div>
+<div class="ttc" id="classCombat_html_a67c594c4c62e4131ac992a4705e0933d"><div class="ttname"><a href="classCombat.html#a67c594c4c62e4131ac992a4705e0933d">Combat::region_defenseur</a></div><div class="ttdeci">Region region_defenseur</div><div class="ttdef"><b>Definition:</b> Combat.h:21</div></div>
+<div class="ttc" id="classCombat_html_a5818162704c7fc1131c5862e10c362d4"><div class="ttname"><a href="classCombat.html#a5818162704c7fc1131c5862e10c362d4">Combat::region_attaquant</a></div><div class="ttdeci">Region region_attaquant</div><div class="ttdef"><b>Definition:</b> Combat.h:20</div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="classJoueur_html"><div class="ttname"><a href="classJoueur.html">Joueur</a></div><div class="ttdef"><b>Definition:</b> Joueur.h:15</div></div>
+<div class="ttc" id="Joueur_8h_html"><div class="ttname"><a href="Joueur_8h.html">Joueur.h</a></div></div>
+<div class="ttc" id="classCombat_html"><div class="ttname"><a href="classCombat.html">Combat</a></div><div class="ttdef"><b>Definition:</b> Combat.h:15</div></div>
+<div class="ttc" id="classRegion_html"><div class="ttname"><a href="classRegion.html">Region</a></div><div class="ttdef"><b>Definition:</b> Region.h:13</div></div>
+<div class="ttc" id="classCombat_html_a19460ba6b6e3c0da1cc26ac177a824bc"><div class="ttname"><a href="classCombat.html#a19460ba6b6e3c0da1cc26ac177a824bc">Combat::attaquant</a></div><div class="ttdeci">Joueur attaquant</div><div class="ttdef"><b>Definition:</b> Combat.h:18</div></div>
+<div class="ttc" id="Region_8h_html"><div class="ttname"><a href="Region_8h.html">Region.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Lundi 1 Mai 2017 16:03:43 pour A vos Risk et périls par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>
